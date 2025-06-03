@@ -34,7 +34,7 @@ def test_daily_max():
     """Test that max function works for an array of positive integers."""
 
     test_input = np.array([[1,2],
-                           [5.9],
+                           [5,9],
                            [4,4],
                            [8,2]])
     test_result = np.array([8,9])
@@ -47,7 +47,7 @@ def test_daily_min():
     """Test that daily min function works for an array of postive integers."""
 
     test_input = np.array([[1,2],
-                           [5.9],
+                           [5,9],
                            [4,4],
                            [8,2]])
     test_result = np.array([1,2])
