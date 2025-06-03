@@ -29,18 +29,14 @@ def test_daily_mean_integers():
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(daily_mean(test_input), test_result)
 
-
-def test_daily_max():
+@pytest.mark.parametrize("test, expected", [
+                                            ([[1,2],[5,9],[4,4],[8,2]], [8,9]),
+                                              ])
+def test_daily_max(test, expected):
     """Test that max function works for an array of positive integers."""
 
-    test_input = np.array([[1,2],
-                           [5,9],
-                           [4,4],
-                           [8,2]])
-    test_result = np.array([8,9])
-
     # Need to use Numpy testing functions to compare arrays
-    npt.assert_array_equal(daily_max(test_input), test_result)
+    npt.assert_array_equal(daily_max(test), expected)
 
 
 def test_daily_min():
