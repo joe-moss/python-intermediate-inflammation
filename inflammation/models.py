@@ -50,5 +50,5 @@ def daily_min(data):
 
 def patient_normalise(data):
     """Normalise patient data from a 2D inflammation data array."""
-    max = np.max(data, axis=0)
-    return data / max[:, np.newaxis]
+    patient_max_inflammation = np.max(data, axis=0)
+    return data / patient_max_inflammation[:, np.newaxis]
